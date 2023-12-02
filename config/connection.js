@@ -1,5 +1,12 @@
-const { connect, connection } = require('mongoose');
+const { connect, connection } = require("mongoose");
 
-connect('mongodb://127.0.0.1:27017/developersApplications');
+const connectionString = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/social-network";
 
-module.exports = connection;
+// Export the connect function, not the connection object
+module.exports = {
+    connectDB: async () => {
+      await connect(connectionString);
+      console.log("Connected to the database");
+    },
+    connection: connection,
+  };
