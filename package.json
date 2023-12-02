@@ -1,17 +1,20 @@
 {
-  "name": "social-network-api",
+  "name": "social-thoughts",
   "version": "1.0.0",
-  "description": "a NoSQL API build using Mongoose.",
-  "main": "server.js",
+  "description": "A social network API created by using MongoDB and Mongoose.",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "mon": "nodemon server.js",
+    "seed": "node utils/seed"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dayjs": "^1.11.10",
     "express": "^4.18.2",
-    "mongoose": "^8.0.2"
+    "mongoose": "^7.6.3",
+    "nodemon": "^3.0.1"
   }
 }
